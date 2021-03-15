@@ -11,7 +11,11 @@ positive_part = sphere(pos=vector(0, 0, 0), q=1, radius=0.2, color=color.cyan)
 
 negative_part = sphere(pos=vector(1, 0, 0), q=-1, radius=0.2, color=color.yellow)
 
+# # Step 10 - Move y position of dipole particles
+# positive_part.pos.y = 2
+# negative_part.pos.y = 2
 
+# Steps 3-6
 # test_particle = sphere(pos=vector(3,4,0), radius=0.1)
 #
 # # Calculate distance
@@ -26,6 +30,7 @@ negative_part = sphere(pos=vector(1, 0, 0), q=-1, radius=0.2, color=color.yellow
 #
 # # Make arrow
 # test_arrow = arrow(pos=vector(3,4,0), axis= (1*10**-8)*total_elec_field)
+
 
 # Define function to plot test particles
 
