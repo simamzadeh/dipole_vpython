@@ -10,3 +10,9 @@ positive = sphere(pos=vector(0,0,0), q = 1, radius=0.2, color=color.cyan)
 negative = sphere(pos=vector(1,0,0), q = -1, radius=0.2, color=color.yellow)
 
 test_position = sphere(pos=vector(3,4,0), radius=0.1)
+
+# Calculate distance
+r_pos = test_position.pos - positive.pos
+r_neg = test_position.pos - negative.pos
+# print(r_pos)
+# print(r_neg)
