@@ -22,5 +22,6 @@ elec_field_neg = k * negative_part.q * (r_neg / (mag(r_neg)**3) )
 
 total_elec_field = elec_field_pos + elec_field_neg
 
-print(total_elec_field)
+# Make arrow
+test_arrow = arrow(pos=vector(3,4,0), axis= (1*10**-8)*total_elec_field)
 
