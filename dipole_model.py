@@ -45,18 +45,24 @@ def plot_test_particle(test_position):
 
 plot_test_particle(vector(3, 4, 0))
 
-# Plot 16 arrows
+# Plot 16 arrows in the xy plane
 
 count = 1
 radius = 5
-theta = 360 / 16
+theta = radians(360 / 16)
 
 while count < 16:
     count += 1
 
-    position = radius * vector(np.cos(theta), np.sin(theta), 0)
-    position.x = radius * np.cos(theta**count)
-    position.y = radius * np.sin(theta**count)
+    # Plotting test charges in xy plane
+    position_xy = radius * vector(np.cos(theta), np.sin(theta), 0)
+    position_xy.x = radius * np.cos(theta*count)
+    position_xy.y = radius * np.sin(theta*count)
 
-    plot_test_particle(position)
+    # Plotting test charges in xz plane
+    position_xz = radius * vector(np.cos(theta), 0, np.sin(theta))
+    position_xz.x = radius * np.cos(theta*count)
+    position_xz.z = radius * np.sin(theta*count)
 
+    plot_test_particle(position_xy)
+    plot_test_particle(position_xz)
